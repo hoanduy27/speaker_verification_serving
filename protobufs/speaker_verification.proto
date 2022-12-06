@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package bksv.v1;
+
+
+service SpeakerVerificationService {
+  rpc SpeakerVerify (SpeakerVerificationRequest) returns (SpeakerVerificationResponse) {
+  }
+}
+
+message SpeakerVerificationRequest {
+    repeated bytes enroll_utterances = 1;
+    bytes utterance = 2;
+}
+
+message SpeakerVerificationResponse {
+  float similarity = 1;
+  bool accept = 2;
+}

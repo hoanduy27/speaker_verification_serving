@@ -1,0 +1,15 @@
+sim_threshold: 0.7
+
+feature_ext_conf:
+  sr: 16000
+  n_fft: 512
+  window_length: 400
+  hop_length: 160
+  n_mels: 40
+  top_db: 10
+  maxlen_s: 1.5
+
+model_conf:
+  lstm_hidden: 768
+  lstm_layers: 3
+  emb_dim: 256

@@ -1,0 +1,1 @@
+__all__ = ['speaker_verification_pb2', 'speaker_verification_pb2_grpc']

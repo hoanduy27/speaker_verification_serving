@@ -1,0 +1,6 @@
+pydub
+grpcio
+grpcio-tools
+Flask
+scipy
+soundfile
