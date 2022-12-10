@@ -10,7 +10,7 @@ from pydub import AudioSegment
 
 from speaker_verification import (speaker_verification_pb2,
                                   speaker_verification_pb2_grpc)
-from verifier import SpeakerVerifier
+from speaker_verification.verifier import SpeakerVerifier
 
 SV_HOST =  os.environ.get('SV_HOST', 'localhost')
 SV_PORT = os.environ.get('SV_PORT', '5001')

@@ -9,7 +9,7 @@ import soundfile as sf
 import torch
 import torch.nn.functional as F
 
-from speech_embedder_net import SpeechEmbedder
+from speaker_verification.speech_embedder_net import SpeechEmbedder
 
 
 def compute_spectrogram(audio_data, sr, n_fft, hop_length, window_length, n_mels, **kwargs):    

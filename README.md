@@ -14,7 +14,7 @@ python server.py <model_path> <config_file>
 ```sh
 pip install -r requirements.txt
 ```
-2. Ecport variables
+2. Export variables
 ```sh
 export dev.env
 ```
