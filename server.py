@@ -1,10 +1,10 @@
 import logging
 import os
-import yaml
 import sys
 from concurrent import futures
 
 import grpc
+import yaml
 from google.protobuf.json_format import MessageToDict
 from pydub import AudioSegment
 
@@ -35,6 +35,7 @@ class SpeakerVerifierServicer(speaker_verification_pb2_grpc.SpeakerVerificationS
     def SpeakerVerify(self, request, context):
         logging.info("Verifying")
         distance, accept = self.verify(request.enroll_utterances, request.utterance)
+        
         
         return speaker_verification_pb2.SpeakerVerificationResponse(similarity=distance, accept=accept)
 

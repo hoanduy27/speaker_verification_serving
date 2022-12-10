@@ -6,8 +6,7 @@ feature_ext_conf:
   window_length: 400
   hop_length: 160
   n_mels: 40
-  top_db: 10
-  maxlen_s: 1.5
+  desired_len_s: 3
 
 model_conf:
   lstm_hidden: 768

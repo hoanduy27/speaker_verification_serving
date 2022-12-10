@@ -16,8 +16,12 @@ def verify(enroll_utts, candidate_utt):
     stub = speaker_verification_pb2_grpc.SpeakerVerificationServiceStub(channel)
     request = speaker_verification_pb2.SpeakerVerificationRequest(
         enroll_utterances=enroll_utts, utterance=candidate_utt)
-    ret = stub.SpeakerVerify(request)
-    print(ret)
+    ret = MessageToDict(
+        stub.SpeakerVerify(request)
+    ) 
+
+    ret.setdefault('accept', False)
+    return ret
 
 def test():
     import os
@@ -37,7 +41,8 @@ def test():
             with open(filepath, 'rb') as f:
                 candidate_utt = f.read()
                 print('Candidate: ',filepath)
-                verify(enroll_utts, candidate_utt)
+                ret = verify(enroll_utts, candidate_utt)
+                print(ret)
                 
 
 if __name__ == "__main__":
