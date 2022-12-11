@@ -19,7 +19,6 @@ numpy==1.23.5
 pyyaml==6.0
 ```
 
-
 ## 2. How to run
 1. Export variables:
 ```sh
