@@ -52,7 +52,7 @@ All the models use the same config in [config/verfier_conf.yaml](config/verifier
 |vivos_noise_softmax_ge2e.model|vivos (clean + noise)|Softmax GE2E|
 |vivos_noise_contrastive_ge2e.model|vivos (clean + noise)|Contrastive GE2E|
 
-## 5. Example script:
+## 4. Example script:
 You can run this script to download the model `vivos_noise_softmax_ge2e.model` and then start the server:
 ```sh
 pip install gdown
